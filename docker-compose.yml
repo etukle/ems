@@ -9,6 +9,8 @@ services:
       - ./backend:/app  # This allows live updates
     networks:
       - app-network
+    environment:
+      DATABASE_URL: "${DATABASE_URL}"
 
   frontend:
     build:
